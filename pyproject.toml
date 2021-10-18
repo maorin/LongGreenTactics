@@ -1,0 +1,49 @@
+[tool.briefcase]
+project_name = "LongGreenTactics"
+bundle = "com.longgreentactics"
+version = "0.0.1"
+url = "https://longgreentactics.com/longgreentactics"
+license = "BSD license"
+author = 'maorin'
+author_email = "maorin@longgreentactics.com"
+
+[tool.briefcase.app.longgreentactics]
+formal_name = "LongGreenTactics"
+description = "longgreentactics"
+icon = "src/longgreentactics/resources/longgreentactics"
+sources = ['src/longgreentactics']
+requires = []
+
+
+[tool.briefcase.app.longgreentactics.macOS]
+requires = [
+    'toga-cocoa>=0.3.0.dev20',
+]
+
+[tool.briefcase.app.longgreentactics.linux]
+requires = [
+    'toga-gtk>=0.3.0.dev20',
+]
+system_requires = [
+    'libgirepository1.0-dev',
+    'libcairo2-dev',
+    'libpango1.0-dev',
+    'libwebkitgtk-3.0-0',
+    'gir1.2-webkit-3.0',
+]
+
+[tool.briefcase.app.longgreentactics.windows]
+requires = [
+    'toga-winforms>=0.3.0.dev20',
+]
+
+# Mobile deployments
+[tool.briefcase.app.longgreentactics.iOS]
+requires = [
+    'toga-iOS>=0.3.0.dev20',
+]
+
+[tool.briefcase.app.longgreentactics.android]
+requires = [
+    'toga-android>=0.3.0.dev20',
+]
